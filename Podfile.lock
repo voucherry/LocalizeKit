@@ -1,0 +1,16 @@
+PODS:
+  - JSONKit (1.5pre)
+  - ObjcAssociatedObjectHelpers (1.1)
+  - RegexKitLite (4.0)
+
+DEPENDENCIES:
+  - JSONKit
+  - ObjcAssociatedObjectHelpers
+  - RegexKitLite
+
+SPEC CHECKSUMS:
+  JSONKit: 409734ab3407fce90ef7eaa95d7168f38d9a6601
+  ObjcAssociatedObjectHelpers: 592fdb2b3bc8a84214abf4cce9526c14efa80ded
+  RegexKitLite: 293ff6f3cf8f34277989a37802162c6961a2b35a
+
+COCOAPODS: 0.18.1

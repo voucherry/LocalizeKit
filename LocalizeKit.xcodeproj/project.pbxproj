@@ -7,15 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		284F4BBD17247BC4006D1DE8 /* UIToolbar+LocalizeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 284F4BBC17247BC4006D1DE8 /* UIToolbar+LocalizeKit.m */; };
+		284F4BCD17247D23006D1DE8 /* I18n.m in Sources */ = {isa = PBXBuildFile; fileRef = 2879163D172477BC00D5C783 /* I18n.m */; };
+		286915A21724820B00052EA5 /* NSDictionary+DeepMutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 286915A11724820B00052EA5 /* NSDictionary+DeepMutableCopy.m */; };
+		286915A51724822700052EA5 /* NSArray+DeepMutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 286915A41724822700052EA5 /* NSArray+DeepMutableCopy.m */; };
+		286915A6172482D200052EA5 /* NSObject+LocalizeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 287916641724795D00D5C783 /* NSObject+LocalizeKit.h */; };
+		286915A7172482D200052EA5 /* UIBarButtonItem+LocalizeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 287916661724795D00D5C783 /* UIBarButtonItem+LocalizeKit.h */; };
+		286915A8172482D200052EA5 /* UIButton+LocalizeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 287916681724795D00D5C783 /* UIButton+LocalizeKit.h */; };
+		286915A9172482D200052EA5 /* UILabel+LocalizeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2879166A1724795D00D5C783 /* UILabel+LocalizeKit.h */; };
+		286915AA172482D200052EA5 /* UINavigationBar+LocalizeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2879166C1724795D00D5C783 /* UINavigationBar+LocalizeKit.h */; };
+		286915AB172482D200052EA5 /* UINavigationItem+LocalizeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2879166E1724795D00D5C783 /* UINavigationItem+LocalizeKit.h */; };
+		286915AC172482D200052EA5 /* UISearchBar+LocalizeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 287916701724795D00D5C783 /* UISearchBar+LocalizeKit.h */; };
+		286915AD172482D200052EA5 /* UITextField+LocalizeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 287916721724795D00D5C783 /* UITextField+LocalizeKit.h */; };
+		286915AE172482D200052EA5 /* UITextView+LocalizeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 287916741724795D00D5C783 /* UITextView+LocalizeKit.h */; };
+		286915AF172482D200052EA5 /* UIToolbar+LocalizeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 284F4BBB17247BC4006D1DE8 /* UIToolbar+LocalizeKit.h */; };
+		286915B0172482D200052EA5 /* UIView+LocalizeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 287916781724795D00D5C783 /* UIView+LocalizeKit.h */; };
+		286915B1172482D200052EA5 /* UIViewController+LocalizeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 287916881724798900D5C783 /* UIViewController+LocalizeKit.h */; };
+		286915B2172482D200052EA5 /* I18n.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2879163C172477BC00D5C783 /* I18n.h */; };
 		287916151724778700D5C783 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287916141724778700D5C783 /* Foundation.framework */; };
 		2879161A1724778700D5C783 /* LocalizeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 287916191724778700D5C783 /* LocalizeKit.h */; };
-		2879161C1724778700D5C783 /* LocalizeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2879161B1724778700D5C783 /* LocalizeKit.m */; };
 		287916241724778700D5C783 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287916231724778700D5C783 /* SenTestingKit.framework */; };
-		287916261724778700D5C783 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287916251724778700D5C783 /* UIKit.framework */; };
 		287916271724778700D5C783 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287916141724778700D5C783 /* Foundation.framework */; };
 		2879162A1724778700D5C783 /* libLocalizeKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 287916111724778700D5C783 /* libLocalizeKit.a */; };
 		287916301724778700D5C783 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2879162E1724778700D5C783 /* InfoPlist.strings */; };
 		287916331724778700D5C783 /* LocalizeKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 287916321724778700D5C783 /* LocalizeKitTests.m */; };
+		2879167C1724795D00D5C783 /* NSObject+LocalizeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 287916651724795D00D5C783 /* NSObject+LocalizeKit.m */; };
+		2879167D1724795D00D5C783 /* UIBarButtonItem+LocalizeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 287916671724795D00D5C783 /* UIBarButtonItem+LocalizeKit.m */; };
+		2879167E1724795D00D5C783 /* UIButton+LocalizeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 287916691724795D00D5C783 /* UIButton+LocalizeKit.m */; };
+		2879167F1724795D00D5C783 /* UILabel+LocalizeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2879166B1724795D00D5C783 /* UILabel+LocalizeKit.m */; };
+		287916801724795D00D5C783 /* UINavigationBar+LocalizeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2879166D1724795D00D5C783 /* UINavigationBar+LocalizeKit.m */; };
+		287916811724795D00D5C783 /* UINavigationItem+LocalizeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2879166F1724795D00D5C783 /* UINavigationItem+LocalizeKit.m */; };
+		287916821724795D00D5C783 /* UISearchBar+LocalizeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 287916711724795D00D5C783 /* UISearchBar+LocalizeKit.m */; };
+		287916831724795D00D5C783 /* UITextField+LocalizeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 287916731724795D00D5C783 /* UITextField+LocalizeKit.m */; };
+		287916841724795D00D5C783 /* UITextView+LocalizeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 287916751724795D00D5C783 /* UITextView+LocalizeKit.m */; };
+		287916861724795D00D5C783 /* UIView+LocalizeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 287916791724795D00D5C783 /* UIView+LocalizeKit.m */; };
+		2879168A1724798900D5C783 /* UIViewController+LocalizeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 287916891724798900D5C783 /* UIViewController+LocalizeKit.m */; };
+		5A87FEF91B0E4388BFA3D66F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2DCE4C972B494AAA79D073 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,24 +63,69 @@
 			dstSubfolderSpec = 16;
 			files = (
 				2879161A1724778700D5C783 /* LocalizeKit.h in CopyFiles */,
+				286915A6172482D200052EA5 /* NSObject+LocalizeKit.h in CopyFiles */,
+				286915A7172482D200052EA5 /* UIBarButtonItem+LocalizeKit.h in CopyFiles */,
+				286915A8172482D200052EA5 /* UIButton+LocalizeKit.h in CopyFiles */,
+				286915A9172482D200052EA5 /* UILabel+LocalizeKit.h in CopyFiles */,
+				286915AA172482D200052EA5 /* UINavigationBar+LocalizeKit.h in CopyFiles */,
+				286915AB172482D200052EA5 /* UINavigationItem+LocalizeKit.h in CopyFiles */,
+				286915AC172482D200052EA5 /* UISearchBar+LocalizeKit.h in CopyFiles */,
+				286915AD172482D200052EA5 /* UITextField+LocalizeKit.h in CopyFiles */,
+				286915AE172482D200052EA5 /* UITextView+LocalizeKit.h in CopyFiles */,
+				286915AF172482D200052EA5 /* UIToolbar+LocalizeKit.h in CopyFiles */,
+				286915B0172482D200052EA5 /* UIView+LocalizeKit.h in CopyFiles */,
+				286915B1172482D200052EA5 /* UIViewController+LocalizeKit.h in CopyFiles */,
+				286915B2172482D200052EA5 /* I18n.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		284F4BBB17247BC4006D1DE8 /* UIToolbar+LocalizeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+LocalizeKit.h"; sourceTree = "<group>"; };
+		284F4BBC17247BC4006D1DE8 /* UIToolbar+LocalizeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+LocalizeKit.m"; sourceTree = "<group>"; };
+		284F4BCC17247CF1006D1DE8 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		286915A01724820B00052EA5 /* NSDictionary+DeepMutableCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DeepMutableCopy.h"; sourceTree = "<group>"; };
+		286915A11724820B00052EA5 /* NSDictionary+DeepMutableCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DeepMutableCopy.m"; sourceTree = "<group>"; };
+		286915A31724822700052EA5 /* NSArray+DeepMutableCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DeepMutableCopy.h"; sourceTree = "<group>"; };
+		286915A41724822700052EA5 /* NSArray+DeepMutableCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DeepMutableCopy.m"; sourceTree = "<group>"; };
 		287916111724778700D5C783 /* libLocalizeKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLocalizeKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		287916141724778700D5C783 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		287916181724778700D5C783 /* LocalizeKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LocalizeKit-Prefix.pch"; sourceTree = "<group>"; };
 		287916191724778700D5C783 /* LocalizeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalizeKit.h; sourceTree = "<group>"; };
-		2879161B1724778700D5C783 /* LocalizeKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalizeKit.m; sourceTree = "<group>"; };
 		287916221724778700D5C783 /* LocalizeKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalizeKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		287916231724778700D5C783 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		287916251724778700D5C783 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		2879162D1724778700D5C783 /* LocalizeKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LocalizeKitTests-Info.plist"; sourceTree = "<group>"; };
 		2879162F1724778700D5C783 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		287916311724778700D5C783 /* LocalizeKitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalizeKitTests.h; sourceTree = "<group>"; };
 		287916321724778700D5C783 /* LocalizeKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalizeKitTests.m; sourceTree = "<group>"; };
+		2879163C172477BC00D5C783 /* I18n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = I18n.h; sourceTree = "<group>"; };
+		2879163D172477BC00D5C783 /* I18n.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = I18n.m; sourceTree = "<group>"; };
+		287916641724795D00D5C783 /* NSObject+LocalizeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LocalizeKit.h"; sourceTree = "<group>"; };
+		287916651724795D00D5C783 /* NSObject+LocalizeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LocalizeKit.m"; sourceTree = "<group>"; };
+		287916661724795D00D5C783 /* UIBarButtonItem+LocalizeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+LocalizeKit.h"; sourceTree = "<group>"; };
+		287916671724795D00D5C783 /* UIBarButtonItem+LocalizeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+LocalizeKit.m"; sourceTree = "<group>"; };
+		287916681724795D00D5C783 /* UIButton+LocalizeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+LocalizeKit.h"; sourceTree = "<group>"; };
+		287916691724795D00D5C783 /* UIButton+LocalizeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LocalizeKit.m"; sourceTree = "<group>"; };
+		2879166A1724795D00D5C783 /* UILabel+LocalizeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+LocalizeKit.h"; sourceTree = "<group>"; };
+		2879166B1724795D00D5C783 /* UILabel+LocalizeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LocalizeKit.m"; sourceTree = "<group>"; };
+		2879166C1724795D00D5C783 /* UINavigationBar+LocalizeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+LocalizeKit.h"; sourceTree = "<group>"; };
+		2879166D1724795D00D5C783 /* UINavigationBar+LocalizeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+LocalizeKit.m"; sourceTree = "<group>"; };
+		2879166E1724795D00D5C783 /* UINavigationItem+LocalizeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+LocalizeKit.h"; sourceTree = "<group>"; };
+		2879166F1724795D00D5C783 /* UINavigationItem+LocalizeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+LocalizeKit.m"; sourceTree = "<group>"; };
+		287916701724795D00D5C783 /* UISearchBar+LocalizeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+LocalizeKit.h"; sourceTree = "<group>"; };
+		287916711724795D00D5C783 /* UISearchBar+LocalizeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+LocalizeKit.m"; sourceTree = "<group>"; };
+		287916721724795D00D5C783 /* UITextField+LocalizeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+LocalizeKit.h"; sourceTree = "<group>"; };
+		287916731724795D00D5C783 /* UITextField+LocalizeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+LocalizeKit.m"; sourceTree = "<group>"; };
+		287916741724795D00D5C783 /* UITextView+LocalizeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+LocalizeKit.h"; sourceTree = "<group>"; };
+		287916751724795D00D5C783 /* UITextView+LocalizeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+LocalizeKit.m"; sourceTree = "<group>"; };
+		287916781724795D00D5C783 /* UIView+LocalizeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LocalizeKit.h"; sourceTree = "<group>"; };
+		287916791724795D00D5C783 /* UIView+LocalizeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LocalizeKit.m"; sourceTree = "<group>"; };
+		287916881724798900D5C783 /* UIViewController+LocalizeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LocalizeKit.h"; sourceTree = "<group>"; };
+		287916891724798900D5C783 /* UIViewController+LocalizeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LocalizeKit.m"; sourceTree = "<group>"; };
+		2879168B172479DB00D5C783 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		4B2DCE4C972B494AAA79D073 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		88E281BBE1444381932016F3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				287916151724778700D5C783 /* Foundation.framework in Frameworks */,
+				5A87FEF91B0E4388BFA3D66F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +143,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				287916241724778700D5C783 /* SenTestingKit.framework in Frameworks */,
-				287916261724778700D5C783 /* UIKit.framework in Frameworks */,
 				287916271724778700D5C783 /* Foundation.framework in Frameworks */,
 				2879162A1724778700D5C783 /* libLocalizeKit.a in Frameworks */,
 			);
@@ -79,6 +151,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2869159F172481EB00052EA5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2879168B172479DB00D5C783 /* Macros.h */,
+				284F4BCC17247CF1006D1DE8 /* Singleton.h */,
+				286915A01724820B00052EA5 /* NSDictionary+DeepMutableCopy.h */,
+				286915A11724820B00052EA5 /* NSDictionary+DeepMutableCopy.m */,
+				286915A31724822700052EA5 /* NSArray+DeepMutableCopy.h */,
+				286915A41724822700052EA5 /* NSArray+DeepMutableCopy.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		287916081724778700D5C783 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +171,7 @@
 				2879162B1724778700D5C783 /* LocalizeKitTests */,
 				287916131724778700D5C783 /* Frameworks */,
 				287916121724778700D5C783 /* Products */,
+				88E281BBE1444381932016F3 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,7 +189,7 @@
 			children = (
 				287916141724778700D5C783 /* Foundation.framework */,
 				287916231724778700D5C783 /* SenTestingKit.framework */,
-				287916251724778700D5C783 /* UIKit.framework */,
+				4B2DCE4C972B494AAA79D073 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -111,8 +197,11 @@
 		287916161724778700D5C783 /* LocalizeKit */ = {
 			isa = PBXGroup;
 			children = (
+				2869159F172481EB00052EA5 /* Utils */,
+				2879163F172477C700D5C783 /* Localize Helpers */,
+				2879163C172477BC00D5C783 /* I18n.h */,
+				2879163D172477BC00D5C783 /* I18n.m */,
 				287916191724778700D5C783 /* LocalizeKit.h */,
-				2879161B1724778700D5C783 /* LocalizeKit.m */,
 				287916171724778700D5C783 /* Supporting Files */,
 			);
 			path = LocalizeKit;
@@ -145,6 +234,37 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		2879163F172477C700D5C783 /* Localize Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				287916641724795D00D5C783 /* NSObject+LocalizeKit.h */,
+				287916651724795D00D5C783 /* NSObject+LocalizeKit.m */,
+				287916661724795D00D5C783 /* UIBarButtonItem+LocalizeKit.h */,
+				287916671724795D00D5C783 /* UIBarButtonItem+LocalizeKit.m */,
+				287916681724795D00D5C783 /* UIButton+LocalizeKit.h */,
+				287916691724795D00D5C783 /* UIButton+LocalizeKit.m */,
+				2879166A1724795D00D5C783 /* UILabel+LocalizeKit.h */,
+				2879166B1724795D00D5C783 /* UILabel+LocalizeKit.m */,
+				2879166C1724795D00D5C783 /* UINavigationBar+LocalizeKit.h */,
+				2879166D1724795D00D5C783 /* UINavigationBar+LocalizeKit.m */,
+				2879166E1724795D00D5C783 /* UINavigationItem+LocalizeKit.h */,
+				2879166F1724795D00D5C783 /* UINavigationItem+LocalizeKit.m */,
+				287916701724795D00D5C783 /* UISearchBar+LocalizeKit.h */,
+				287916711724795D00D5C783 /* UISearchBar+LocalizeKit.m */,
+				287916721724795D00D5C783 /* UITextField+LocalizeKit.h */,
+				287916731724795D00D5C783 /* UITextField+LocalizeKit.m */,
+				287916741724795D00D5C783 /* UITextView+LocalizeKit.h */,
+				287916751724795D00D5C783 /* UITextView+LocalizeKit.m */,
+				284F4BBB17247BC4006D1DE8 /* UIToolbar+LocalizeKit.h */,
+				284F4BBC17247BC4006D1DE8 /* UIToolbar+LocalizeKit.m */,
+				287916781724795D00D5C783 /* UIView+LocalizeKit.h */,
+				287916791724795D00D5C783 /* UIView+LocalizeKit.m */,
+				287916881724798900D5C783 /* UIViewController+LocalizeKit.h */,
+				287916891724798900D5C783 /* UIViewController+LocalizeKit.m */,
+			);
+			name = "Localize Helpers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,9 +272,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 287916361724778700D5C783 /* Build configuration list for PBXNativeTarget "LocalizeKit" */;
 			buildPhases = (
+				9D01C8FADEDC434D90EDF30A /* Check Pods Manifest.lock */,
 				2879160D1724778700D5C783 /* Sources */,
 				2879160E1724778700D5C783 /* Frameworks */,
 				2879160F1724778700D5C783 /* CopyFiles */,
+				B6DE4410C51A41D18E897821 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +358,34 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		9D01C8FADEDC434D90EDF30A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sanbox is not in sync with the Podfile.lock. Run 'pod install'.\nEOM\n    exit 1\nfi\n";
+		};
+		B6DE4410C51A41D18E897821 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -243,7 +393,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2879161C1724778700D5C783 /* LocalizeKit.m in Sources */,
+				2879167C1724795D00D5C783 /* NSObject+LocalizeKit.m in Sources */,
+				2879167D1724795D00D5C783 /* UIBarButtonItem+LocalizeKit.m in Sources */,
+				2879167E1724795D00D5C783 /* UIButton+LocalizeKit.m in Sources */,
+				2879167F1724795D00D5C783 /* UILabel+LocalizeKit.m in Sources */,
+				287916801724795D00D5C783 /* UINavigationBar+LocalizeKit.m in Sources */,
+				287916811724795D00D5C783 /* UINavigationItem+LocalizeKit.m in Sources */,
+				287916821724795D00D5C783 /* UISearchBar+LocalizeKit.m in Sources */,
+				287916831724795D00D5C783 /* UITextField+LocalizeKit.m in Sources */,
+				287916841724795D00D5C783 /* UITextView+LocalizeKit.m in Sources */,
+				287916861724795D00D5C783 /* UIView+LocalizeKit.m in Sources */,
+				2879168A1724798900D5C783 /* UIViewController+LocalizeKit.m in Sources */,
+				284F4BBD17247BC4006D1DE8 /* UIToolbar+LocalizeKit.m in Sources */,
+				284F4BCD17247D23006D1DE8 /* I18n.m in Sources */,
+				286915A21724820B00052EA5 /* NSDictionary+DeepMutableCopy.m in Sources */,
+				286915A51724822700052EA5 /* NSArray+DeepMutableCopy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,8 +496,13 @@
 		};
 		287916371724778700D5C783 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88E281BBE1444381932016F3 /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/LocalizeKit.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LocalizeKit/LocalizeKit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
@@ -344,8 +513,13 @@
 		};
 		287916381724778700D5C783 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88E281BBE1444381932016F3 /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/LocalizeKit.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LocalizeKit/LocalizeKit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
@@ -403,6 +577,7 @@
 				287916381724778700D5C783 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		287916391724778700D5C783 /* Build configuration list for PBXNativeTarget "LocalizeKitTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +586,7 @@
 				2879163B1724778700D5C783 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
