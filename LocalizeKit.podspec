@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LocalizeKit"
-  s.version      = "0.9.1"
+  s.version      = "0.5.0"
   s.summary      = "Localization library."
   s.homepage     = "http://voucherry.com"
   s.license      = 'MIT'

@@ -18,6 +18,8 @@
 #define LOCALIZE_KIT_DEVMODE NO
 #endif
 
+#define LOCALIZE_KIT_VERSION @"0.5.0"
+
 #import <Foundation/Foundation.h>
 #import "Macros.h"
 #import "I18n.h"
