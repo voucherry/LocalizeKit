@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		284F4BBD17247BC4006D1DE8 /* UIToolbar+LocalizeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 284F4BBC17247BC4006D1DE8 /* UIToolbar+LocalizeKit.m */; };
-		284F4BCD17247D23006D1DE8 /* I18n.m in Sources */ = {isa = PBXBuildFile; fileRef = 2879163D172477BC00D5C783 /* I18n.m */; };
+		284F4BCD17247D23006D1DE8 /* LocalizeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2879163D172477BC00D5C783 /* LocalizeKit.m */; };
 		286915A21724820B00052EA5 /* NSDictionary+DeepMutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 286915A11724820B00052EA5 /* NSDictionary+DeepMutableCopy.m */; };
 		286915A51724822700052EA5 /* NSArray+DeepMutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 286915A41724822700052EA5 /* NSArray+DeepMutableCopy.m */; };
 		286915A6172482D200052EA5 /* NSObject+LocalizeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 287916641724795D00D5C783 /* NSObject+LocalizeKit.h */; };
@@ -23,9 +23,8 @@
 		286915AF172482D200052EA5 /* UIToolbar+LocalizeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 284F4BBB17247BC4006D1DE8 /* UIToolbar+LocalizeKit.h */; };
 		286915B0172482D200052EA5 /* UIView+LocalizeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 287916781724795D00D5C783 /* UIView+LocalizeKit.h */; };
 		286915B1172482D200052EA5 /* UIViewController+LocalizeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 287916881724798900D5C783 /* UIViewController+LocalizeKit.h */; };
-		286915B2172482D200052EA5 /* I18n.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2879163C172477BC00D5C783 /* I18n.h */; };
+		286915B2172482D200052EA5 /* LocalizeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2879163C172477BC00D5C783 /* LocalizeKit.h */; };
 		287916151724778700D5C783 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287916141724778700D5C783 /* Foundation.framework */; };
-		2879161A1724778700D5C783 /* LocalizeKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 287916191724778700D5C783 /* LocalizeKit.h */; };
 		287916241724778700D5C783 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287916231724778700D5C783 /* SenTestingKit.framework */; };
 		287916271724778700D5C783 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287916141724778700D5C783 /* Foundation.framework */; };
 		2879162A1724778700D5C783 /* libLocalizeKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 287916111724778700D5C783 /* libLocalizeKit.a */; };
@@ -42,6 +41,8 @@
 		287916841724795D00D5C783 /* UITextView+LocalizeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 287916751724795D00D5C783 /* UITextView+LocalizeKit.m */; };
 		287916861724795D00D5C783 /* UIView+LocalizeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 287916791724795D00D5C783 /* UIView+LocalizeKit.m */; };
 		2879168A1724798900D5C783 /* UIViewController+LocalizeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 287916891724798900D5C783 /* UIViewController+LocalizeKit.m */; };
+		28BF0270174A190900146C2F /* LocalizeKitConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BF026F174A190900146C2F /* LocalizeKitConfig.m */; };
+		28BF0273174A1C0300146C2F /* NSDictionary+Merge.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BF0272174A1C0300146C2F /* NSDictionary+Merge.m */; };
 		5A87FEF91B0E4388BFA3D66F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2DCE4C972B494AAA79D073 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +63,6 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				2879161A1724778700D5C783 /* LocalizeKit.h in CopyFiles */,
 				286915A6172482D200052EA5 /* NSObject+LocalizeKit.h in CopyFiles */,
 				286915A7172482D200052EA5 /* UIBarButtonItem+LocalizeKit.h in CopyFiles */,
 				286915A8172482D200052EA5 /* UIButton+LocalizeKit.h in CopyFiles */,
@@ -75,7 +75,7 @@
 				286915AF172482D200052EA5 /* UIToolbar+LocalizeKit.h in CopyFiles */,
 				286915B0172482D200052EA5 /* UIView+LocalizeKit.h in CopyFiles */,
 				286915B1172482D200052EA5 /* UIViewController+LocalizeKit.h in CopyFiles */,
-				286915B2172482D200052EA5 /* I18n.h in CopyFiles */,
+				286915B2172482D200052EA5 /* LocalizeKit.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,15 +92,14 @@
 		287916111724778700D5C783 /* libLocalizeKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLocalizeKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		287916141724778700D5C783 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		287916181724778700D5C783 /* LocalizeKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LocalizeKit-Prefix.pch"; sourceTree = "<group>"; };
-		287916191724778700D5C783 /* LocalizeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalizeKit.h; sourceTree = "<group>"; };
 		287916221724778700D5C783 /* LocalizeKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalizeKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		287916231724778700D5C783 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		2879162D1724778700D5C783 /* LocalizeKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LocalizeKitTests-Info.plist"; sourceTree = "<group>"; };
 		2879162F1724778700D5C783 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		287916311724778700D5C783 /* LocalizeKitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalizeKitTests.h; sourceTree = "<group>"; };
 		287916321724778700D5C783 /* LocalizeKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalizeKitTests.m; sourceTree = "<group>"; };
-		2879163C172477BC00D5C783 /* I18n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = I18n.h; sourceTree = "<group>"; };
-		2879163D172477BC00D5C783 /* I18n.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = I18n.m; sourceTree = "<group>"; };
+		2879163C172477BC00D5C783 /* LocalizeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizeKit.h; sourceTree = "<group>"; };
+		2879163D172477BC00D5C783 /* LocalizeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizeKit.m; sourceTree = "<group>"; };
 		287916641724795D00D5C783 /* NSObject+LocalizeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LocalizeKit.h"; sourceTree = "<group>"; };
 		287916651724795D00D5C783 /* NSObject+LocalizeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LocalizeKit.m"; sourceTree = "<group>"; };
 		287916661724795D00D5C783 /* UIBarButtonItem+LocalizeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+LocalizeKit.h"; sourceTree = "<group>"; };
@@ -123,7 +122,11 @@
 		287916791724795D00D5C783 /* UIView+LocalizeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LocalizeKit.m"; sourceTree = "<group>"; };
 		287916881724798900D5C783 /* UIViewController+LocalizeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LocalizeKit.h"; sourceTree = "<group>"; };
 		287916891724798900D5C783 /* UIViewController+LocalizeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LocalizeKit.m"; sourceTree = "<group>"; };
-		2879168B172479DB00D5C783 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		2879168B172479DB00D5C783 /* LocalizeKitMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalizeKitMacros.h; sourceTree = "<group>"; };
+		28BF026E174A190800146C2F /* LocalizeKitConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizeKitConfig.h; sourceTree = "<group>"; };
+		28BF026F174A190900146C2F /* LocalizeKitConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizeKitConfig.m; sourceTree = "<group>"; };
+		28BF0271174A1C0200146C2F /* NSDictionary+Merge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Merge.h"; sourceTree = "<group>"; };
+		28BF0272174A1C0300146C2F /* NSDictionary+Merge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Merge.m"; sourceTree = "<group>"; };
 		4B2DCE4C972B494AAA79D073 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E281BBE1444381932016F3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -154,12 +157,14 @@
 		2869159F172481EB00052EA5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				2879168B172479DB00D5C783 /* Macros.h */,
+				2879168B172479DB00D5C783 /* LocalizeKitMacros.h */,
 				284F4BCC17247CF1006D1DE8 /* Singleton.h */,
 				286915A01724820B00052EA5 /* NSDictionary+DeepMutableCopy.h */,
 				286915A11724820B00052EA5 /* NSDictionary+DeepMutableCopy.m */,
 				286915A31724822700052EA5 /* NSArray+DeepMutableCopy.h */,
 				286915A41724822700052EA5 /* NSArray+DeepMutableCopy.m */,
+				28BF0271174A1C0200146C2F /* NSDictionary+Merge.h */,
+				28BF0272174A1C0300146C2F /* NSDictionary+Merge.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -199,9 +204,10 @@
 			children = (
 				2869159F172481EB00052EA5 /* Utils */,
 				2879163F172477C700D5C783 /* Localize Helpers */,
-				2879163C172477BC00D5C783 /* I18n.h */,
-				2879163D172477BC00D5C783 /* I18n.m */,
-				287916191724778700D5C783 /* LocalizeKit.h */,
+				2879163C172477BC00D5C783 /* LocalizeKit.h */,
+				2879163D172477BC00D5C783 /* LocalizeKit.m */,
+				28BF026E174A190800146C2F /* LocalizeKitConfig.h */,
+				28BF026F174A190900146C2F /* LocalizeKitConfig.m */,
 				287916171724778700D5C783 /* Supporting Files */,
 			);
 			path = LocalizeKit;
@@ -405,9 +411,11 @@
 				287916861724795D00D5C783 /* UIView+LocalizeKit.m in Sources */,
 				2879168A1724798900D5C783 /* UIViewController+LocalizeKit.m in Sources */,
 				284F4BBD17247BC4006D1DE8 /* UIToolbar+LocalizeKit.m in Sources */,
-				284F4BCD17247D23006D1DE8 /* I18n.m in Sources */,
+				284F4BCD17247D23006D1DE8 /* LocalizeKit.m in Sources */,
 				286915A21724820B00052EA5 /* NSDictionary+DeepMutableCopy.m in Sources */,
 				286915A51724822700052EA5 /* NSArray+DeepMutableCopy.m in Sources */,
+				28BF0270174A190900146C2F /* LocalizeKitConfig.m in Sources */,
+				28BF0273174A1C0300146C2F /* NSDictionary+Merge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,22 +1,23 @@
 //
-//  I18n.m
+//  LocalizeKit.m
 //  LocalizeKit
 //
 //  Created by Cristian Bica on 2/20/13.
 //  Copyright (c) 2013 Voucherry LLC. All rights reserved.
 //
 
-#import "I18n.h"
+#import "LocalizeKit.h"
 #import "Singleton.h"
 #import "RegexKitLite.h"
 #import "JSONKit.h"
 #import "NSDictionary+DeepMutableCopy.h"
 #import "NSArray+DeepMutableCopy.h"
-#import "Macros.h"
+#import "LocalizeKitMacros.h"
+#import "NSDictionary+Merge.h"
 
-//#import "NSDictionary+Merge.h"
+NSString * const LocalizeKitShouldReloadDataNotification = @"LocalizeKitShouldReloadDataNotification";
 
-@interface I18n ()
+@interface LocalizeKit ()
 
 - (NSString *)translate:(NSString *)key scope:(NSString *)scope params:(NSDictionary *)params;
 - (void)storeTranslation:(NSString *)translation forKey:(NSString *)key inScope:(NSString *)scope;
@@ -24,17 +25,22 @@
 
 @end
 
-@implementation I18n
-SINGLETON(I18n)
+@implementation LocalizeKit
+SINGLETON(LocalizeKit)
 
-+ (void)setup {
++(void)setup:(void (^)(LocalizeKitConfig *config))block {
+  block([LocalizeKitConfig instance]);
+  [[self instance] setData:nil];
   [[self instance] data];
-  [[NSNotificationCenter defaultCenter] addObserverForName:@"LocalizeKitDataChanged"
-                                                    object:nil
-                                                     queue:nil
-                                                usingBlock:^(NSNotification *note) {
-                                                  [[self instance] setData:nil];
-                                                }];
+  static dispatch_once_t pred;
+  dispatch_once( &pred, ^{
+    [[NSNotificationCenter defaultCenter] addObserverForName:LocalizeKitShouldReloadDataNotification
+                                                      object:nil
+                                                       queue:nil
+                                                  usingBlock:^(NSNotification *note) {
+                                                    [[self instance] setData:nil];
+                                                  }];
+  });
 }
 
 + (NSString *)translate:(NSString *)key {
@@ -42,7 +48,7 @@ SINGLETON(I18n)
 }
 
 + (NSString *)translate:(NSString *)key scope:(NSString *)scope {
-  return [[self instance] translate:key scope:nil params:nil];
+  return [[self instance] translate:key scope:scope params:nil];
 }
 
 + (NSString *)translate:(NSString *)key params:(NSDictionary *)params {
@@ -77,6 +83,10 @@ SINGLETON(I18n)
   return [[self instance] translate:key scope:scope params:params];
 }
 
+- (LocalizeKitConfig *)config {
+  return [LocalizeKitConfig instance];
+}
+
 - (NSString *)translate:(NSString *)key scope:(NSString *)scope params:(NSDictionary *)params {
   if (scope==nil) scope = @"General";
   if (params==nil) params = @{};
@@ -85,10 +95,9 @@ SINGLETON(I18n)
     [r appendString:self.data[scope][key]];
   } else {
     [r appendString:NOTNIL(params[@"default"], key)];
-    //TODO: store translation if in dev mode
-//    if (APP_ENV == DEVELOPMENT) {
-//      [self storeTranslation:[r copy] forKey:key inScope:scope];
-//    }
+    if (self.config.devMode) {
+      [self storeTranslation:[r copy] forKey:key inScope:scope];
+    }
   }
   
   NSString *uninterpolatedResult = [NSString stringWithString:r];
@@ -138,35 +147,32 @@ SINGLETON(I18n)
     
   }];
   
-  //TODO: write the localization plist to disk in dev mode
-//  if (APP_ENV == DEVELOPMENT) {
-//    @try {
-//      NSMutableDictionary *interpolations = [NSMutableDictionary dictionaryWithDictionary:params];
-//      [interpolations removeObjectForKey:@"default"];
-//      NSDictionary *interpolationsToSave = (interpolations.count> 0 ? @{scope : @{ key : interpolations } } : @{});
-//      [[NOTNIL([NSDictionary dictionaryWithContentsOfFile:@"/Users/cristi/Desktop/vi18n.plist"], @{})
-//        dictionaryByMergingWith:@{
-//        self.usedLocaleIdentifier : self.data,
-//        [self.usedLocaleIdentifier stringByAppendingString:@"-interpolations"] : interpolationsToSave
-//        }]
-//       writeToFile:@"/Users/cristi/Desktop/vi18n.plist"
-//       atomically:NO];
-//    }
-//    @catch (NSException *exception) {}
-//    @try {
-//      NSString *f = [NSString stringWithFormat:@"%@/voucherry-i18n-%@.plist",
-//                     [[UIApplication sharedApplication] documentsDirectoryURL].path,
-//                     self.usedLocaleIdentifier];
-//      [[NOTNIL([NSDictionary dictionaryWithContentsOfFile:f], @{})
-//        dictionaryByMergingWith:self.data]
-//       writeToFile:f
-//       atomically:NO];
-//    }
-//    @catch (NSException *exception) {}
-  
+  if (self.config.devMode) {
+    @try {
+      NSMutableDictionary *interpolations = [NSMutableDictionary dictionaryWithDictionary:params];
+      [interpolations removeObjectForKey:@"default"];
+      NSString *filePath = [NSString stringWithFormat:@"/Users/%@/Desktop/%@-%@.plist",
+                            NSUserName(),
+                            [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"],
+                            self.config.dataFileName
+                            ];
+      NSDictionary *interpolationsToSave = (interpolations.count> 0 ? @{scope : @{ key : interpolations } } : @{});
+      [[NOTNIL([NSDictionary dictionaryWithContentsOfFile:filePath], @{})
+        dictionaryByMergingWith:@{
+        self.usedLocaleIdentifier : self.data,
+        [self.usedLocaleIdentifier stringByAppendingString:@"-interpolations"] : interpolationsToSave
+        }]
+       writeToFile:filePath
+       atomically:NO];
+    }
+    @catch (NSException *exception) {
+      if (self.config.debug)
+        NSLog(@"%@", exception);
+    }
 
-    //NSLog(@"Translating... \nKEY: %@\nSCOPE: %@\nPARAMS: %@\nUNINTERPOLATED RESULT: %@\nRESULT: %@\n", key, scope, params, uninterpolatedResult, r);
-//  }
+    if(self.config.debug)
+      NSLog(@"Translating... \nKEY: %@\nSCOPE: %@\nPARAMS: %@\nUNINTERPOLATED RESULT: %@\nRESULT: %@\n", key, scope, params, uninterpolatedResult, r);
+  }
   return r;
 }
 
@@ -183,15 +189,15 @@ SINGLETON(I18n)
 }
 
 - (NSMutableDictionary *)loadLocales {
-  NSDictionary *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"voucherry-i18n"];
+  NSDictionary *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"localize-kit"];
   NSString *currentLocale = [[NSLocale currentLocale] localeIdentifier];
   if (data==nil) { //TODO: or DEV model
     [[NSUserDefaults standardUserDefaults]
      registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle]
-                                                                  pathForResource:@"I18n"
+                                                                  pathForResource:self.config.dataFileName
                                                                   ofType:@"plist"]]];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    data = [[NSUserDefaults standardUserDefaults] objectForKey:@"voucherry-i18n"];
+    data = [[NSUserDefaults standardUserDefaults] objectForKey:@"localize-kit"];
   }
   if (data[currentLocale]!=nil) {
     self.usedLocaleIdentifier = currentLocale;

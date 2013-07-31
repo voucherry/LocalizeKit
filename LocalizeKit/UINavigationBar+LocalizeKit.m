@@ -9,7 +9,7 @@
 #import "UINavigationBar+LocalizeKit.h"
 #import "NSObject+LocalizeKit.h"
 #import "UINavigationItem+LocalizeKit.h"
-#import "Macros.h"
+#import "LocalizeKitMacros.h"
 
 @implementation UINavigationBar (LocalizeKit)
 

@@ -7,7 +7,7 @@
 //
 
 #import "UILabel+LocalizeKit.h"
-#import "Macros.h"
+#import "LocalizeKitMacros.h"
 #import "NSObject+LocalizeKit.h"
 
 @implementation UILabel (LocalizeKit)

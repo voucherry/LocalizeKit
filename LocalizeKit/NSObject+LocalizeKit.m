@@ -8,7 +8,7 @@
 
 #import "NSObject+LocalizeKit.h"
 #import "NSObject+AssociatedDictionary.h"
-#import "Macros.h"
+#import "LocalizeKitMacros.h"
 
 @implementation NSObject (LocalizeKit)
 

@@ -10,7 +10,7 @@
 #import "UIView+LocalizeKit.h"
 #import "UINavigationItem+LocalizeKit.h"
 #import "NSObject+AssociatedDictionary.h"
-#import "Macros.h"
+#import "LocalizeKitMacros.h"
 #import "NSObject+LocalizeKit.h"
 
 @implementation UIViewController (LocalizeKit)

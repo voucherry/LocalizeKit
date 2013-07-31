@@ -7,7 +7,7 @@
 //
 
 #import "UISearchBar+LocalizeKit.h"
-#import "Macros.h"
+#import "LocalizeKitMacros.h"
 #import "NSObject+LocalizeKit.h"
 
 @implementation UISearchBar (LocalizeKit)

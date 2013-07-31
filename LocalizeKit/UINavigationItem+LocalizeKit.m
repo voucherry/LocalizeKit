@@ -8,13 +8,13 @@
 
 #import "UINavigationItem+LocalizeKit.h"
 #import "UIBarButtonItem+LocalizeKit.h"
-#import "Macros.h"
+#import "LocalizeKitMacros.h"
 #import "NSObject+LocalizeKit.h"
 
 @implementation UINavigationItem (LocalizeKit)
 
 - (void)localizeInScope:(NSString *)scope {
-  if(self.isLocalizable)
+  if(self.isLocalizable && self.titleView!=nil)
     self.title = VL(@"Page Title", NOTNIL(scope, self.i18nScope), @{@"default": NOTNIL(self.title, @"")});
   [self.leftBarButtonItems enumerateObjectsUsingBlock:^(UIBarButtonItem *btn, NSUInteger idx, BOOL *stop) {
     [btn localizeInScope:scope];

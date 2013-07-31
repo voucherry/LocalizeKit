@@ -7,7 +7,7 @@
 //
 
 #import "UIButton+LocalizeKit.h"
-#import "Macros.h"
+#import "LocalizeKitMacros.h"
 #import "NSObject+LocalizeKit.h"
 
 @interface UIButton ()
