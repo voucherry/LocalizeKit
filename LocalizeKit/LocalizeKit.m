@@ -151,11 +151,7 @@ SINGLETON(LocalizeKit)
     @try {
       NSMutableDictionary *interpolations = [NSMutableDictionary dictionaryWithDictionary:params];
       [interpolations removeObjectForKey:@"default"];
-      NSString *filePath = [NSString stringWithFormat:@"/Users/%@/Desktop/%@-%@.plist",
-                            NSUserName(),
-                            [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"],
-                            self.config.dataFileName
-                            ];
+      NSString *filePath = self.config.devWritesToFile;
       NSDictionary *interpolationsToSave = (interpolations.count> 0 ? @{scope : @{ key : interpolations } } : @{});
       [[NOTNIL([NSDictionary dictionaryWithContentsOfFile:filePath], @{})
         dictionaryByMergingWith:@{

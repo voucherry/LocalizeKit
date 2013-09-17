@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSString * dataFileName;
 @property (nonatomic) BOOL devMode;
 @property (nonatomic) BOOL debug;
+@property (nonatomic, strong) NSString * devWritesToFile;
 
 + (LocalizeKitConfig *)instance;
 

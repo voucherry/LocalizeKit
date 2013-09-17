@@ -18,6 +18,11 @@ SINGLETON(LocalizeKitConfig)
     self.devMode = NO;
     self.debug = NO;
     self.dataFileName = @"LocalizeKit";
+    self.devWritesToFile = [NSString stringWithFormat:@"/Users/%@/Desktop/%@-%@.plist",
+                            NSUserName(),
+                            [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"],
+                            self.dataFileName
+                            ];
   }
   return self;
 }
