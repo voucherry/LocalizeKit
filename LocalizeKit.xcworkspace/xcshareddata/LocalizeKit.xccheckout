@@ -10,29 +10,29 @@
 	<string>LocalizeKit</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>BD195EE0-89C7-434A-AA7A-44258858ED2D</key>
+		<key>4354F46080C7ADBDA83C0E2155CAE295F6B881FE</key>
 		<string>ssh://github.com/voucherry/LocalizeKit.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>LocalizeKit.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>BD195EE0-89C7-434A-AA7A-44258858ED2D</key>
+		<key>4354F46080C7ADBDA83C0E2155CAE295F6B881FE</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/voucherry/LocalizeKit.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>BD195EE0-89C7-434A-AA7A-44258858ED2D</string>
+	<string>4354F46080C7ADBDA83C0E2155CAE295F6B881FE</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>BD195EE0-89C7-434A-AA7A-44258858ED2D</string>
+			<string>4354F46080C7ADBDA83C0E2155CAE295F6B881FE</string>
 			<key>IDESourceControlWCCName</key>
 			<string>LocalizeKit</string>
 		</dict>

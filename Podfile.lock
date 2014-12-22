@@ -1,5 +1,5 @@
 PODS:
-  - ObjcAssociatedObjectHelpers (1.1)
+  - ObjcAssociatedObjectHelpers (1.2.1)
   - RegexKitLite (4.0)
 
 DEPENDENCIES:
@@ -7,7 +7,7 @@ DEPENDENCIES:
   - RegexKitLite
 
 SPEC CHECKSUMS:
-  ObjcAssociatedObjectHelpers: 592fdb2b3bc8a84214abf4cce9526c14efa80ded
-  RegexKitLite: f7af7b4d2b675cd2ec9a4abab6aad6ae1f6499c0
+  ObjcAssociatedObjectHelpers: bbb9f597f62ab0d7b0c187f56bc887c9f7d0c8f0
+  RegexKitLite: c0e4c12e6e7de0769f3a3ed679f0f61604170661
 
-COCOAPODS: 0.26.2
+COCOAPODS: 0.35.0
