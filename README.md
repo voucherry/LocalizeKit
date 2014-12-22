@@ -1,0 +1,4 @@
+LocalizeKit
+===========
+
+iOS localisation kit
