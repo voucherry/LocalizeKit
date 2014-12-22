@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28110F5B1807F6CD00C7341A /* JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 28110F5A1807F6CD00C7341A /* JSON.m */; };
 		284F4BBD17247BC4006D1DE8 /* UIToolbar+LocalizeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 284F4BBC17247BC4006D1DE8 /* UIToolbar+LocalizeKit.m */; };
 		284F4BCD17247D23006D1DE8 /* LocalizeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2879163D172477BC00D5C783 /* LocalizeKit.m */; };
 		286915A21724820B00052EA5 /* NSDictionary+DeepMutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 286915A11724820B00052EA5 /* NSDictionary+DeepMutableCopy.m */; };
@@ -82,6 +83,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		28110F591807F6CD00C7341A /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		28110F5A1807F6CD00C7341A /* JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSON.m; sourceTree = "<group>"; };
 		284F4BBB17247BC4006D1DE8 /* UIToolbar+LocalizeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+LocalizeKit.h"; sourceTree = "<group>"; };
 		284F4BBC17247BC4006D1DE8 /* UIToolbar+LocalizeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+LocalizeKit.m"; sourceTree = "<group>"; };
 		284F4BCC17247CF1006D1DE8 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
@@ -165,6 +168,8 @@
 				286915A41724822700052EA5 /* NSArray+DeepMutableCopy.m */,
 				28BF0271174A1C0200146C2F /* NSDictionary+Merge.h */,
 				28BF0272174A1C0300146C2F /* NSDictionary+Merge.m */,
+				28110F591807F6CD00C7341A /* JSON.h */,
+				28110F5A1807F6CD00C7341A /* JSON.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -406,6 +411,7 @@
 				287916801724795D00D5C783 /* UINavigationBar+LocalizeKit.m in Sources */,
 				287916811724795D00D5C783 /* UINavigationItem+LocalizeKit.m in Sources */,
 				287916821724795D00D5C783 /* UISearchBar+LocalizeKit.m in Sources */,
+				28110F5B1807F6CD00C7341A /* JSON.m in Sources */,
 				287916831724795D00D5C783 /* UITextField+LocalizeKit.m in Sources */,
 				287916841724795D00D5C783 /* UITextView+LocalizeKit.m in Sources */,
 				287916861724795D00D5C783 /* UIView+LocalizeKit.m in Sources */,

@@ -9,11 +9,11 @@
 #import "LocalizeKit.h"
 #import "Singleton.h"
 #import "RegexKitLite.h"
-#import "JSONKit.h"
 #import "NSDictionary+DeepMutableCopy.h"
 #import "NSArray+DeepMutableCopy.h"
 #import "LocalizeKitMacros.h"
 #import "NSDictionary+Merge.h"
+#import "JSON.h"
 
 NSString * const LocalizeKitShouldReloadDataNotification = @"LocalizeKitShouldReloadDataNotification";
 
@@ -96,7 +96,7 @@ SINGLETON(LocalizeKit)
   } else {
     [r appendString:NOTNIL(params[@"default"], key)];
     if (self.config.devMode) {
-      [self storeTranslation:[r copy] forKey:key inScope:scope];
+      [self storeTranslation:[@"" stringByAppendingString:r] forKey:key inScope:scope];
     }
   }
   
@@ -108,7 +108,7 @@ SINGLETON(LocalizeKit)
                     usingBlock:^NSString *(NSInteger captureCount, NSString *const __unsafe_unretained *capturedStrings, const NSRange *capturedRanges, volatile BOOL *const stop) {
                       if (captureCount==2) {
                         //process the interpolation data
-                        NSDictionary *dict = [capturedStrings[1] objectFromJSONString];
+                        NSDictionary *dict = [capturedStrings[1] JSONValue];
                         NSString *pluralKey = [[dict allKeys] objectAtIndex:0];
                         NSDictionary *pluralData = dict[pluralKey];
                         
