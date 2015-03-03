@@ -67,10 +67,10 @@ SINGLETON(LocalizeKit)
   NSString *key;
   NSString *scope;
   NSDictionary *params;
-  
+
   key = args[0];
   [args removeObjectAtIndex:0];
-  
+
   if (args.count>0 && [args[0] isKindOfClass:[NSString class]]) {
     scope = args[0];
     [args removeObjectAtIndex:0];
@@ -99,9 +99,9 @@ SINGLETON(LocalizeKit)
       [self storeTranslation:[@"" stringByAppendingString:r] forKey:key inScope:scope];
     }
   }
-  
+
   NSString *uninterpolatedResult = [NSString stringWithString:r];
-  
+
   //replace cldr interpolations
   //ex: pluralization %<{"count": { "zero": "Nada", "one": "One Cherry Coin", "other": "%{count} Cherry Coins" } }>
   [r replaceOccurrencesOfRegex:@"%<(.*?)>"
@@ -111,11 +111,11 @@ SINGLETON(LocalizeKit)
                         NSDictionary *dict = [capturedStrings[1] JSONValue];
                         NSString *pluralKey = [[dict allKeys] objectAtIndex:0];
                         NSDictionary *pluralData = dict[pluralKey];
-                        
+
                         //return the string if the translation params doesn't include the plural key
                         if (params[pluralKey]==nil)
                           return capturedStrings[0];
-                        
+
                         //when the cldr interpolated param is a number try to pluralize
                         if ([params[pluralKey] isKindOfClass:[NSNumber class]]) {
                           if ([params[pluralKey] integerValue]==0 && pluralData[@"zero"]!=nil)
@@ -127,7 +127,7 @@ SINGLETON(LocalizeKit)
                           if (pluralData[@"other"]!=nil)
                             return dict[pluralKey][@"other"];
                         }
-                        
+
                         //if the parameter is in the parameter
                         if (pluralData[params[pluralKey]]!=nil)
                           return pluralData[params[pluralKey]];
@@ -144,9 +144,15 @@ SINGLETON(LocalizeKit)
                        withString:[NSString stringWithFormat:@"%@",obj]
                           options:NSCaseInsensitiveSearch
                             range:NSMakeRange(0, [r length])];
-    
+
   }];
-  
+  if ([r isMatchedByRegex:@"&.*?;"]) {
+    r = [[[[NSAttributedString alloc] initWithData:[r dataUsingEncoding:NSUTF8StringEncoding]
+                                           options:@{NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType}
+                                documentAttributes:nil
+                                             error:nil] string] mutableCopy];
+  }
+
   if (self.config.devMode) {
     @try {
       NSMutableDictionary *interpolations = [NSMutableDictionary dictionaryWithDictionary:params];
