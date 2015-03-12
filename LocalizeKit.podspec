@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.source_files = 'LocalizeKit/*.{h,m}'
   s.frameworks = 'UIKit'
   s.requires_arc = true
-  s.dependency  'ObjcAssociatedObjectHelpers'
+  s.dependency  'ObjcAssociatedObjectHelpers', '~> 1.0'
   s.dependency  'RegexKitLite'
 end
