@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name         = "LocalizeKit"
-  s.version      = "0.5.1"
+  s.version      = "0.5.2"
   s.summary      = "Localization library."
   s.homepage     = "http://voucherry.com"
   s.license      = { :type => 'MIT' }
   s.author       = { "Cristian Bica" => "cristian.bica@gmail.com" }
-  s.source       = { :git => "https://github.com/voucherry/LocalizeKit.git", :tag => "0.5.0" }
+  s.source       = { :git => "https://github.com/voucherry/LocalizeKit.git", :tag => "0.5.2" }
   s.platform     = :ios, '7.0'
   s.source_files = 'LocalizeKit/*.{h,m}'
   s.frameworks = 'UIKit'
