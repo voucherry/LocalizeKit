@@ -27,8 +27,8 @@ static char const * const LocalizeKitAssociatedDictionaryKey = "LocalizeKitAssoc
 - (BOOL)lk_i18n {
   NSNumber *val = [self.lk_associatedDictionary objectForKey:@"i18n"];
   if (val==nil) {
-    val = @(NO);
-    [self setLk_i18n:val];
+    [self setLk_i18n:NO];
+    return NO;
   }
   return val.boolValue;
 }
