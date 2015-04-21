@@ -26,6 +26,12 @@
 LKSINGLETON(LocalizeKit)
 @synthesize locale=_locale;
 
+- (instancetype)init {
+  if (self = [super init]) {
+  }
+  return self;
+}
+
 - (void)setLocale:(NSString *)locale {
   if (self.data && self.data[@"Localisations"][locale]) {
     _locale = locale;
@@ -46,6 +52,33 @@ LKSINGLETON(LocalizeKit)
   }
   return _locale;
 }
+
+- (NSDictionary *)data {
+  if(_data) return _data;
+  _data = [self loadData];
+  return _data;
+}
+
+- (NSMutableDictionary *)loadData {
+  NSDictionary *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"LocalizeKit"];
+  if (data==nil && self.dataFileName) {
+    [[NSUserDefaults standardUserDefaults]
+     registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle]
+                                                                  pathForResource:self.dataFileName
+                                                                  ofType:@""]]];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    data = [[NSUserDefaults standardUserDefaults] objectForKey:@"LocalizeKit"];
+  }
+  return (data ? [data lk_deepMutableCopy] : nil);
+}
+
+- (NSMutableDictionary *)translations {
+  if(_translations==nil && self.data) {
+    _translations = self.data[@"Localisations"][self.locale];
+  }
+  return _translations;
+}
+
 
 +(void)config:(void (^)(LocalizeKit *lk))block {
   block([LocalizeKit instance]);
@@ -86,6 +119,10 @@ LKSINGLETON(LocalizeKit)
     [args removeObjectAtIndex:0];
   }
   return [[self instance] translate:key scope:scope params:params];
+}
+
++ (void)reload {
+  [[self instance] reload];
 }
 
 - (NSString *)translate:(NSString *)key scope:(NSString *)scope params:(NSDictionary *)params {
@@ -173,7 +210,7 @@ LKSINGLETON(LocalizeKit)
       }
 #endif
       
-      NSString *filePath = [NSString stringWithFormat:@"/Users/%@/Desktop/%@-%@.plist",
+      NSString *filePath = [NSString stringWithFormat:@"/Users/%@/Desktop/%@-%@",
                             currentUser,
                             [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"],
                             self.dataFileName
@@ -199,35 +236,15 @@ LKSINGLETON(LocalizeKit)
 }
 
 - (void)storeTranslation:(NSString *)translation forKey:(NSString *)key inScope:(NSString *)scope {
-  if (self.data[scope]==nil)
-    self.data[scope]= [NSMutableDictionary dictionaryWithCapacity:1];
-  self.data[scope][key]= translation;
+  if (self.translations[scope]==nil)
+    self.translations[scope]= [NSMutableDictionary dictionaryWithCapacity:1];
+  self.translations[scope][key]= translation;
 }
 
-- (NSDictionary *)data {
-  if(_data) return _data;
-  _data = [self loadData];
-  return _data;
+- (void)reload {
+  self.translations = nil;
+  self.data =  nil;
 }
 
-- (NSMutableDictionary *)loadData {
-  NSDictionary *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"LocalizeKit"];
-  if (data==nil) {
-    [[NSUserDefaults standardUserDefaults]
-     registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle]
-                                                                  pathForResource:self.dataFileName
-                                                                  ofType:@""]]];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    data = [[NSUserDefaults standardUserDefaults] objectForKey:@"LocalizeKit"];
-  }
-  return [data lk_deepMutableCopy];
-}
-
-- (NSMutableDictionary *)translations {
-  if(_translations==nil) {
-    _translations = self.data[@"Localisations"][self.locale];
-  }
-  return _translations;
-}
 
 @end

@@ -46,7 +46,7 @@ typedef NS_ENUM(NSUInteger, LKDebugLevel) {
 + (NSString *)translate:(NSString *)key scope:(NSString *)scope params:(NSDictionary *)params;
 + (NSString *)translatea:(NSArray *)arguments;
 
-- (NSString *)translate:(NSString *)key scope:(NSString *)scope params:(NSDictionary *)params;
++ (void)reload;
 
 @end
 
