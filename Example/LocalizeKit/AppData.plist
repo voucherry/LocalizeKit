@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LocalizeKit</key>
+	<dict>
+		<key>Aliases</key>
+		<dict>
+			<key>en_GB</key>
+			<string>en_US</string>
+			<key>en</key>
+			<string>en_US</string>
+		</dict>
+		<key>Localisations</key>
+		<dict>
+			<key>en_US</key>
+			<dict>
+				<key>Main View</key>
+				<dict>
+					<key>Do not localize this</key>
+					<string>Unlocalisable String</string>
+					<key>A Label</key>
+					<string>A Localised Label</string>
+					<key>A Button</key>
+					<string>A Localised Button</string>
+					<key>Label With Key</key>
+					<string>A Localised Label With Key</string>
+					<key>A label in nested view</key>
+					<string>A Localised label in nested view</string>
+					<key>A button in nested view</key>
+					<string>A Localised button in nested view</string>
+					<key>A placeholder</key>
+					<string>A Localised placeholder</string>
+					<key>Left Button</key>
+					<string>Localised Left Button</string>
+					<key>Right Button</key>
+					<string>Localised Right Button</string>
+					<key>View Title</key>
+					<string>Localised Title</string>
+					<key>Left toolbar button</key>
+					<string>Localised Left toolbar button</string>
+					<key>Right toolbar button</key>
+					<string>Localised Right toolbar button</string>
+					<key>Center toolbar button</key>
+					<string>Localised Center toolbar button</string>
+				</dict>
+				<key>General</key>
+				<dict>
+					<key>String</key>
+					<string>Lorem</string>
+				</dict>
+				<key>Scope1</key>
+				<dict>
+					<key>String1</key>
+					<string>Lorem ipsum</string>
+					<key>String2</key>
+					<string>Lorem ipsum %{word}</string>
+				</dict>
+				<key>Scope2</key>
+				<dict>
+					<key>String3</key>
+					<string>Lorem %&lt;{&quot;ipsums_count&quot;: { &quot;zero&quot;: &quot;no ipsum&quot;, &quot;one&quot;: &quot;one ipsum&quot;, &quot;other&quot;: &quot;%{ipsums_count} ipsums&quot; } }&gt;</string>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>
