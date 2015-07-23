@@ -13,6 +13,8 @@
 @implementation UIView (LocalizeKit)
 
 - (void)lk_localizeInScope:(NSString *)scope {
+  if ([self isKindOfClass:[UITableView class]]) return;
+  if ([self isKindOfClass:[UICollectionView class]]) return;
   [self.subviews enumerateObjectsUsingBlock:^(UIView *subview, NSUInteger idx, BOOL *stop) {
     [subview lk_localizeInScope:(scope ?: self.lk_i18nScope)];
   }];

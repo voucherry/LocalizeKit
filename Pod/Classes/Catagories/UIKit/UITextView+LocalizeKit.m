@@ -7,10 +7,12 @@
 //
 
 #import "UITextView+LocalizeKit.h"
+#import "UIView+LocalizeKit.h"
 
 @implementation UITextView (LocalizeKit)
 
 - (void)lk_localizeInScope:(NSString *)scope {
-  
+  [super lk_localizeInScope:scope];
 }
+
 @end

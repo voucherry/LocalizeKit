@@ -17,6 +17,10 @@
 			<dict>
 				<key>Main View</key>
 				<dict>
+					<key>ChainLink2</key>
+					<string>ChainLink3</string>
+					<key>ChainLink1</key>
+					<string>ChainLink2</string>
 					<key>Do not localize this</key>
 					<string>Unlocalisable String</string>
 					<key>A Label</key>

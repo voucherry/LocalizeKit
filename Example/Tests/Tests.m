@@ -130,6 +130,12 @@ describe(@"View Controllers", ^{
   it(@"should translate toolbar subviews", ^{
     expect([vc.centerToolbarButton titleForState:UIControlStateNormal]).to.equal(@"Localised Center toolbar button");
   });
+  
+  it(@"shoud return the same result even if runned multiple times", ^{
+    expect(vc.anotherLabel.text).to.equal(@"ChainLink2");
+    [vc lk_localize];
+    expect(vc.anotherLabel.text).to.equal(@"ChainLink2");
+  });
 
 });
 

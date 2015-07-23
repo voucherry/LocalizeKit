@@ -15,8 +15,8 @@
  VL(key[, scope][, params_dictionary])
  */
 
-#define LKLocalizedString(key, scope, params) \
-[LocalizeKit translate:(key) scope:(scope) params:(params)]
+#define LKLocalizedString(k, s, p) \
+[LocalizeKit translate:(k) scope:(s) params:(p)]
 
 #define LKL(...) [LocalizeKit translatea:@[__VA_ARGS__]]
 
@@ -30,14 +30,6 @@ shared##classname = [[self alloc] init]; });            \
 return shared##classname;                               \
 }
 #endif
-
-//#ifndef NOTNIL
-//#define NOTNIL(a,b) (a!=nil ? a : b)
-//#endif
-//
-//#ifndef NOTNIL3
-//#define NOTNIL3(a,b,c) NOTNIL(NOTNIL(a,b),c)
-//#endif
 
 
 #endif

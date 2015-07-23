@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *aLabel;
 @property (weak, nonatomic) IBOutlet UIButton *aButton;
 @property (weak, nonatomic) IBOutlet UILabel *aLabelWithKey;
+@property (weak, nonatomic) IBOutlet UILabel *anotherLabel;
 @property (weak, nonatomic) IBOutlet UILabel *aNestedLabel;
 @property (weak, nonatomic) IBOutlet UIButton *aNestedButton;
 @property (weak, nonatomic) IBOutlet UITextField *aTextField;

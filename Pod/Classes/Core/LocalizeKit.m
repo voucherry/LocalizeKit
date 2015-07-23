@@ -218,12 +218,10 @@ LKSINGLETON(LocalizeKit)
       NSDictionary *interpolationsToSave = (interpolations.count> 0 ? @{scope : @{ key : interpolations } } : @{});
       NSDictionary *dictToWrite = [([NSDictionary dictionaryWithContentsOfFile:filePath] ?: @{})
                                    lk_dictionaryByMergingWith:@{
-                                                                self.locale : self.translations,
+                                                                self.locale : (self.translations?:@{}),
                                                                 [self.locale stringByAppendingString:@"-interpolations"] : interpolationsToSave
                                                                 }];
-      [dictToWrite
-       writeToFile:filePath
-       atomically:NO];
+      NSLog(@"Writing to %@ %@", filePath, ([dictToWrite writeToFile:filePath atomically:NO] ? @"SUCCESS" : @"FAILED"));
     }
     @catch (NSException *exception) {
       if (self.debugLevel==LKDebugLevelDevelopment || self.debugLevel==LKDebugLevelDebug)

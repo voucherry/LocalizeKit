@@ -13,14 +13,17 @@
 @implementation UITextField (LocalizeKit)
 
 - (void)lk_localizeInScope:(NSString *)scope {
-  if(!self.lk_isLocalizable) return;
-  if (self.placeholder!=nil && self.placeholder.length>0) {
-    NSString *key = (self.lk_i18nKey ?: self.placeholder);
-    scope = (scope ?: self.lk_i18nScope);
-    NSDictionary *params = @{@"default" : self.placeholder};
-    self.placeholder = LKLocalizedString(key, scope, params);
-  }
+  if(self.placeholder==nil || self.placeholder.length==0 || !self.lk_isLocalizable || self.lk_i18nKey==nil) return;
+  scope = (scope ?: self.lk_i18nScope);
+  NSDictionary *params = @{@"default": self.lk_i18nKey};
+  self.placeholder = LKLocalizedString(self.lk_i18nKey, scope, params);
 }
 
+- (NSString *)lk_i18nKey {
+  if ([super lk_i18nKey]==nil && self.placeholder && self.placeholder.length>0) {
+    [self setLk_i18nKey:self.placeholder];
+  }
+  return [super lk_i18nKey];
+}
 
 @end

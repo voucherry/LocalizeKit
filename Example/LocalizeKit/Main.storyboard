@@ -137,6 +137,16 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="lk_i18nKey" value="Label With Key"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label to test translating the same label multiple times" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeJ-UZ-TpP">
+                                <rect key="frame" x="16" y="306" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="lk_i18n" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="lk_i18nKey" value="ChainLink1"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -167,6 +177,7 @@
                         <outlet property="aNestedButton" destination="eyY-Td-FeO" id="wDr-GW-e3i"/>
                         <outlet property="aNestedLabel" destination="XtW-Uh-nga" id="dzC-LO-cia"/>
                         <outlet property="aTextField" destination="Ueg-Jc-qNC" id="DUO-RF-SYx"/>
+                        <outlet property="anotherLabel" destination="SeJ-UZ-TpP" id="cH9-lM-QGG"/>
                         <outlet property="bottomToolBar" destination="fY3-fN-Pjh" id="lIB-2K-MR0"/>
                         <outlet property="centerToolbarButton" destination="EXe-xU-URw" id="5yX-MW-RhY"/>
                         <outlet property="leftToolbarButton" destination="eJX-cE-Fpo" id="wuD-hS-48J"/>
